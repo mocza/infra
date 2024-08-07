@@ -37,12 +37,7 @@ install_debian() {
     # Install Git
     echo "Installing Git..."
     apt-get install -y git
-
-    # Add Ansible PPA and install Ansible
-    echo "Adding Ansible PPA..."
-    apt-get install -y software-properties-common
-    apt-add-repository --yes --update ppa:ansible/ansible
-
+    
     echo "Installing Ansible..."
     apt-get install -y ansible
 
