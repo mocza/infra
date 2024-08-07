@@ -25,10 +25,10 @@ install_debian() {
     echo "Detected Debian-based system."
 
     # Check if it's a Proxmox VE host
-    if grep -q "Proxmox Virtual Environment" /etc/os-release; then
+    if command -v pveversion &> /dev/null; then
         echo "Detected Proxmox VE host."
         configure_pve_repo
-    fi
+    fi    
 
     # Update package list
     echo "Updating package list..."
